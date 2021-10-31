@@ -31,14 +31,15 @@ public class AppTest {
 
     @Test
     public void shouldBeCheckFileException() {
-        File file = App.fileCreation("D:/Java/inputTest.txt");
+        File file = App.fileCreation("src/main/resources/inputTest.txt");
         Assert.assertThrows(RuntimeException.class, () -> App.checkFile(file));
     }
 
     @Test
-    public void shouldBeFileReaderCreationException() {
-        File file = App.fileCreation("D:/Java/input1.txt");
-        Assert.assertThrows(FileNotFoundException.class, () -> App.fileReaderCreation(file));
+    public void shouldBeCheckReaderCreation() {
+        File file = App.fileCreation("src/main/resources/input1.txt");
+        Assert.assertThrows(FileNotFoundException.class, () ->App.fileReaderCreation(file));
     }
+
 
 }

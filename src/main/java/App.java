@@ -80,7 +80,7 @@ public class App {
                 }
             }
         } else {
-            throw new RuntimeException("Missing file path");
+            throw new RuntimeException("Файл находится ./src/main/resources/input.txt");
         }
 
     }
